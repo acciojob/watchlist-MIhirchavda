@@ -65,8 +65,8 @@ public class MovieController {
     //Return List of movies name(List()) wrapped in a ResponseEntity object
     //Controller Name - findAllMovies
     @GetMapping("/get-all-movies") // postman done
-    public ResponseEntity<List<Movie>> findAllMovies(){
-        List<Movie> m = movieService.getAllM();
+    public ResponseEntity<List<String>> findAllMovies(){
+        List<String> m = movieService.getAllM();
         return new ResponseEntity<>(m ,HttpStatus.OK);
     }
 

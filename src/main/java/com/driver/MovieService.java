@@ -24,7 +24,7 @@ public class MovieService {
     public Director getD(String name){
         return movieRepository.getDirector(name);
     }
-    public List<Movie> getAllM(){
+    public List<String> getAllM(){
         return movieRepository.getAllMovie();
     }
     public void addMoAndDi(String movie ,String director){

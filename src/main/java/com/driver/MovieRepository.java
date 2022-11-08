@@ -37,10 +37,10 @@ public class MovieRepository {
     public Director getDirector(String name){
         return director_list.get(name);
     }
-    public List<Movie> getAllMovie(){
-        List<Movie>movies = new ArrayList<>();
+    public List<String> getAllMovie(){
+        List<String>movies = new ArrayList<>();
         for(Movie m : movie_list.values()){
-            movies.add(m);
+            movies.add(m.getName());
         }
         return movies;
     }
