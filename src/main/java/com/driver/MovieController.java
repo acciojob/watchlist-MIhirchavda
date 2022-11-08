@@ -104,4 +104,15 @@ public class MovieController {
         movieService.deleteAllDi();
         return new ResponseEntity<>("delete all director and movie" , HttpStatus.OK);
     }
+
+    //Get List of movies name for a given director name: GET /movies/get-movies-by-director-name/{director}
+    //Pass director name as path parameter
+    //Return List of movies name(List()) wrapped in a ResponseEntity object
+    //Controller Name - getMoviesByDirectorName
+    @GetMapping("/get-movies-by-director-name/{director}")
+    public ResponseEntity<List<String>> getMoviesByDirectorName(@PathVariable String director){
+        List<String> list = movieService.getMovieByDirector(director);
+
+        return new ResponseEntity<>(list , HttpStatus.OK);
+    }
 }
